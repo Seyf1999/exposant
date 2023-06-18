@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Formulaire de récupération</title>
+  <!-- Inclure les fichiers CSS de Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Formulaire d'enregistrement des établissements</h1>
+
+    <form #registrationForm="ngForm" (ngSubmit)=" createExposant(registrationForm)" class="mx-auto">
+
+      <div class="form-group">
+        <label for="nomEcole">Nom de l'école :</label>
+        <input ngModel name="nomEcole" type="text" class="form-control" id="nomEcole"
+          placeholder="Entrer le nom de l'école" required>
+      </div>
+
+      <div class="form-group">
+        <label for="tel">Téléphone :</label>
+        <input ngModel name="tel" type="tel" class="form-control" id="tel" placeholder="Entrer le numéro de téléphone"
+          required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email :</label>
+        <input ngModel name="email" type="email" class="form-control" id="email" placeholder="Entrer l'adresse email"
+          required>
+      </div>
+
+
+      <div class="form-group">
+        <label for="stand_cells">Nombre de stand :</label>
+        <select ngModel name="stand_cells" class="form-control" id="stand_cells" required>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="nombreKakemono">Nombre de kakémono :</label>
+        <select ngModel name="nombreKakemono" class="form-control" id="nombreKakemono" required>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Valider</button>
+      <button type="button" class="btn btn-secondary">Annuler</button>
+    </form>
+  </div>
+
+  <!-- Inclure les fichiers JavaScript de Bootstrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
